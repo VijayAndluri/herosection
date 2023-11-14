@@ -3,8 +3,6 @@ import { useState } from 'react';
 import Calendar from './Calendar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-
-
 const HeroSection = () => {
   const [showCalendar, setShowCalendar] = useState(false);
 
