@@ -2,12 +2,12 @@ import './App.css';
 import Footer from './Footer';
 import HeroSection from './herosection';
 import NavBar from './NavBar';
+import Services from './Services';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import About from './About';
+const Contact = () => <div>Contact</div>;
 const Home = () => <div>Home Page</div>;
-const About = () => <div>About Page</div>;
-const Services = () => <div>Services Page</div>;
-const Contact = () => <div>Contact Page</div>;
+
 
 function App() {
   return (
@@ -16,10 +16,10 @@ function App() {
       <div>
         <NavBar />
         <Routes>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/services" component={Services} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/" exact component ={Home} />
+          <Route path="/about"  element={<About/>} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>
